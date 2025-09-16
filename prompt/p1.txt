@@ -1,0 +1,12 @@
+prompt = f"""
+You are a highly accurate assistant. Use ONLY the information in the context below to answer. 
+If the answer is not found in the context, say exactly:
+"I could not find this information in the manuals."
+
+Context:
+{context}
+
+Question: {query}
+
+Answer (use only context, do not guess):
+"""
