@@ -20,6 +20,11 @@ oem_chatbot/
 ├─ requirements.txt
 └─ README.md
 ```
+## Architecture
+
+The overall system architecture is shown below:
+
+![Architecture](static/architecture.png)
 
 ## Setup & Installation
 
