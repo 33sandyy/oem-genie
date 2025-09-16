@@ -46,7 +46,7 @@ pip install -r requirements.txt
 To ingest PDFs and build the vector database, run:
 
 ```bash
-python build_index.py --pdf_folder data --persist_dir chroma_db
+python build_index.py --pdf_folder data --persist_dir chroma_store
 ```
 
 - `--pdf_folder`: Folder containing OEM manual PDFs  

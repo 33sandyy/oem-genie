@@ -32,9 +32,9 @@ query = st.text_input("Enter your question:")
 if query:
     with st.spinner("Searching knowledge base..."):
         results = vectordb.similarity_search(query, k=3)
-        # st.sidebar.write("Sample search for 'seatbelt':")
-        # for d in results:
-        #     st.sidebar.write(d.page_content[:150] + "...")
+        st.sidebar.write("Sample search for 'seatbelt':")
+        for d in results:
+            st.sidebar.write(d.page_content[:150] + "...")
 
     if not results:
         st.warning("⚠️ No relevant context found in manuals.")
@@ -52,7 +52,7 @@ if query:
             )
 
         answer = chat_completion.choices[0].message.content
-        st.subheader("AI Answer")
+        st.subheader("✅ AI Answer")
         st.write(answer)
 
         with st.expander("📖 View retrieved context"):
