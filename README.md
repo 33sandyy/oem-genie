@@ -22,11 +22,11 @@ oem_chatbot/
 ```
 
 
-## Architecture
+## Application workflow
 
-The overall system architecture is shown below:
+The overall application workflow is shown below:
 
-![Architecture](static/architecture.png)
+![Application workflow](static/Process.png)
 
 ## System Components
 ![System Components](static/System_Components.png)
