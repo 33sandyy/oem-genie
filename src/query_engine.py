@@ -3,14 +3,13 @@ from typing import Tuple, List, Dict
 from langchain.schema import HumanMessage
 import numpy as np
 
-# Use your LLM wrapper of choice; example uses ChatGroq like your prior code.
 from langchain_groq import ChatGroq
 
 class OEMQueryEngine:
     def __init__(
         self,
         chroma_collection,
-        embedder,           # Embedder instance (langchain embeddings)
+        embedder,       
         groq_api_key: str,
         llm_model: str = "openai/gpt-oss-120b"
     ):
