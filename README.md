@@ -22,7 +22,7 @@ A RAG-based chatbot that leverages company documents, manuals, and FAQs to provi
 
 - Embeddings Database: Converts textual data into embeddings using transformer-based models.
 
-- RAG Pipeline: Built with LangChain + Chroma/FAISS for efficient retrieval and generation.
+- RAG Pipeline: Built with LangChain + Chroma for efficient retrieval and generation.
 
 - Live Agent Escalation: Automatically routes complex queries to human support.
 
@@ -33,11 +33,11 @@ A RAG-based chatbot that leverages company documents, manuals, and FAQs to provi
 
 - LangChain – Orchestrates the RAG pipeline
 
-- Chroma / FAISS – Vector database for embeddings
+- Chroma  – Vector database for embeddings
 
 - HuggingFace Transformers – Embedding and LLM models
 
-- Flask / Streamlit – Optional interface for chatbot
+- Streamlit – Optional interface for chatbot
 
 - Docker – Containerization for deployment
 
