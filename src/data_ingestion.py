@@ -16,10 +16,13 @@ class PDFIngestor:
         total_pages = min(len(reader.pages), self.max_pages)
         for i in range(total_pages):
             page = reader.pages[i]
+            
             page_text = page.extract_text() or ""
+            lines = page_text.split("\n") if page_text else []
             data.append({
                 "page_number": i + 1,
                 "text": page_text.strip(),
+                "lines": lines,
                 "figures": []
             })
 

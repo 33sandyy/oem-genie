@@ -27,6 +27,8 @@ def build(pdf_folder, persist_dir):
             "source": chunk["source"],
             "page_number": chunk["page_number"],
         }
+        if chunk.get("line_number"):
+            meta["line_number"] = chunk["line_number"]
         if chunk.get("figures"):  # only include if not empty
             meta["figures"] = ", ".join(chunk["figures"])
 
