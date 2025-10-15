@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-10-15T17:43:03.818420",
+  "query": "How to wear seatbelt properly?",
+  "retrieved_chunks_count": 3,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "3\nHow to wear seatbelts correctly  \nAll passengers in the vehicle should fasten their seatbelts at all times.\nSIT WITH CORRECT POSTURE\n•  Position the seat upright and lean your back against the seatback.\n•  Avoid reclining the seatback. If your seat is reclined during  \nan accident, you may slide under the seatbelt – which could  \nresult in serious or life-threatening injuries.\nCORRECTLY FASTEN YOUR SEATBELTS\n•  Position the shoulder belt so it does not come into contact",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 3,
+        "start_line_number": 1,
+        "end_line_number": 10
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "CORRECTLY FASTEN YOUR SEATBELTS\n•  Position the shoulder belt so it does not come into contact  \nwith your neck or slide off your shoulder.\n•  Position the lap belt low over the pelvis below the abdomen.\n•  Ensure the buckle of the seatbelt clicks firmly into place.\n•  Read more about seatbelt safety for children under  \n‘2 Child Safety’ in this Safety Guidebook.\nFor instructions on how to adjust the seatbelts,  \nplease refer to the owner’s manual for your vehicle.\n 01  SEATBELTS",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 3,
+        "start_line_number": 8,
+        "end_line_number": 17
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "Locking Retractor) activates and the seatbelt cannot be loosened.\n•  If the seatbelt becomes twisted around a child’s neck, it could \nlead to death by choking. If the buckle cannot be unfastened, \nscissors or other sharp tools should be used to cut the belt.\nEQUIPMENT TO AVOID DANGER CAUSED BY INCORRECT \nOPERATION BY CHILD\n•  Child protective door lock \nThis device prevents a child from opening the rear seat  \ndoor from inside.\n•  Window lock switch",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 5,
+        "start_line_number": 9,
+        "end_line_number": 19
+      }
+    }
+  ],
+  "ai_answer": "To wear a seatbelt correctly:\n\n1. **Sit with the proper posture**  \n   - Set the seat upright and press your back firmly against the seatback.  \n   - Do **not** recline the seatback; a reclined seat can cause you to slide under the belt in a crash.\n\n2. **Position the shoulder belt**  \n   - Run the shoulder portion of the belt across your chest and **away from your neck**.  \n   - Make sure it stays on your shoulder and does not slide off.\n\n3. **Position the lap belt**  \n   - Pull the lap belt low so it sits **over the pelvis**, directly **below the abdomen**.  \n   - This placement protects the internal organs and keeps the belt effective.\n\n4. **Secure the buckle**  \n   - Insert the buckle latch until you hear a firm “click.”  \n   - Verify that the belt is snug but comfortable; you should not be able to pull it out easily.\n\nFollowing these steps ensures the seatbelt works as designed and provides the maximum protection for you and any passengers.",
+  "model_used": "openai/gpt-oss-120b"
+}

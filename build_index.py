@@ -26,9 +26,9 @@ def build(pdf_folder, persist_dir):
             "id": chunk["id"],
             "source": chunk["source"],
             "page_number": chunk["page_number"],
+            "start_line_number": chunk["start_line_number"],
+            "end_line_number":chunk["end_line_number"],
         }
-        if chunk.get("line_number"):
-            meta["line_number"] = chunk["line_number"]
         if chunk.get("figures"):  # only include if not empty
             meta["figures"] = ", ".join(chunk["figures"])
 
@@ -39,7 +39,8 @@ def build(pdf_folder, persist_dir):
             )
         )
 
-    print(f"✅ Loaded {len(documents)} chunks from {len(raw_docs)} PDFs.")
+    # print(f"Sample docs:\n {documents}")
+    print(f"Loaded {len(documents)} chunks from {len(raw_docs)} PDFs.")
 
     # 4️ Create embeddings (consistent with app.py)
     embedder = Embedder(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -52,9 +53,9 @@ def build(pdf_folder, persist_dir):
         persist=True
     )
 
-    print(f"✅ Chroma vector store created and persisted at {persist_dir}")
-    print("📦 Docs inside:", vectordb._collection.count())
-    print("🔎 Sample metadata:", documents[0].metadata if documents else "No docs")
+    print(f"Chroma vector store created and persisted at {persist_dir}")
+    print("Docs inside:", vectordb._collection.count())
+    print("Sample metadata:", documents[0].metadata if documents else "No docs")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

@@ -1,0 +1,24 @@
+{
+  "date": "2025-10-15",
+  "total_queries": 3,
+  "queries": [
+    {
+      "timestamp": "2025-10-15T17:43:03.818420",
+      "query": "How to wear seatbelt properly?",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251015_174303_818420.json"
+    },
+    {
+      "timestamp": "2025-10-15T17:44:04.460092",
+      "query": "How to wear seatbelt properly?",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251015_174404_460092.json"
+    },
+    {
+      "timestamp": "2025-10-15T17:44:32.273209",
+      "query": "Explain SRS airbag",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251015_174432_273209.json"
+    }
+  ]
+}

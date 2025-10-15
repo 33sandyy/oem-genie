@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-10-15T17:44:32.273209",
+  "query": "Explain SRS airbag",
+  "retrieved_chunks_count": 3,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "6\nSRS Airbags \nSRS (Supplemental Restraint System) airbags are designed \nto provide further protection for the driver and passengers \nin addition to the primary safety protection provided by \nseatbelts. Types of SRS airbags are as follows:\n 1 SRS driver airbag / front passenger airbag \n2 SRS side airbags\nSPECIFICATIONS MAY VARY FROM THE MODELS AVAILABLE.\nSIT WITH CORRECT POSTURE\n•  Do not sit too close to the steering wheel or dashboard.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 6,
+        "start_line_number": 1,
+        "end_line_number": 11
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "SIT WITH CORRECT POSTURE\n•  Do not sit too close to the steering wheel or dashboard.  \nThe driver and the front passenger should not hold items  \non their laps.\n•  Do not allow anyone to lean against the door, centre pillar,  \nrear pillar and roof side rail.\n•  Do not allow anyone to kneel on the passenger seat facing  \nthe side door or put their heads or hands out the window.\nSRS AIRBAGS MAY NOT DEPLOY EVEN IN A COLLISION\n•  Examples of SRS airbags not deploying (test vehicle)",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 6,
+        "start_line_number": 9,
+        "end_line_number": 19
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "7\n•  Example of deployment in which SRS airbags may not demonstrate \ntheir primary effectiveness.\nIN ROLLS AND TURN OVERS  \nFor details, please refer to the owner’s manual for your vehicle.\nDO NOT ATTACH OBJECTS AROUND THE SRS AIRBAGS\n•  Do not attach objects on areas such as the dashboard, steering \nwheel pad, lower portion of instrument panel, doors, windshield \nglass, front or rear pillar, roof side rail and assist grip.\nABS",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 7,
+        "start_line_number": 1,
+        "end_line_number": 9
+      }
+    }
+  ],
+  "ai_answer": "SRS (Supplemental Restraint System) airbags are safety devices that work together with the seat‑belt to give extra protection to the driver and passengers in a crash.  \n\n**How they work**  \n- They are designed to deploy in a collision and cushion the occupants, reducing the risk of serious injury.  \n- The system includes several airbag types:  \n  1. **Driver airbag** and **front‑passenger airbag** – located in the steering wheel and dashboard.  \n  2. **Side airbags** – positioned in the doors or side panels to protect the torso and head in a side impact.  \n\n**Important usage notes** (from the manual)  \n- Sit with correct posture; do not sit too close to the steering wheel or dashboard.  \n- Keep laps free of items and avoid leaning on the door, centre pillar, rear pillar, or roof side rail.  \n- Do not kneel on the passenger seat facing the side door, and keep heads and hands inside the vehicle.  \n- Do **not** attach objects to the dashboard, steering‑wheel pad, instrument panel, doors, windshield, pillars, roof rail, or assist grip, as these can interfere with airbag operation.  \n\n**Limitations**  \n- In certain situations—such as rolls, turn‑overs, or other extreme impacts—SRS airbags may not deploy or may not provide their full effectiveness.  \n\nFor detailed specifications and deployment conditions, refer to the vehicle’s owner’s manual.",
+  "model_used": "openai/gpt-oss-120b"
+}

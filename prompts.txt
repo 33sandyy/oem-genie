@@ -1,0 +1,76 @@
+ 
+ 
+ chunks with few incorrect end_line_number and  start_line_number sample 
+{
+    "id": "safety manual.pdf_p6_c0",
+    "source": "safety manual.pdf",
+    "page_number": 6,
+    "start_line_number": 1,
+    "end_line_number": 34,
+    "text": "6\nSRS Airbags \nSRS (Supplemental Restraint System) airbags are designed \nto provide further protection for the driver and passengers \nin addition to the primary safety protection provided by \nseatbelts. Types of SRS airbags are as follows:\n 1 SRS driver airbag / front passenger airbag \n2 SRS side airbags\nSPECIFICATIONS MAY VARY FROM THE MODELS AVAILABLE.\nSIT WITH CORRECT POSTURE\n•  Do not sit too close to the steering wheel or dashboard.",
+    "figures": []
+  },
+  {
+    "id": "safety manual.pdf_p6_c1",
+    "source": "safety manual.pdf",
+    "page_number": 6,
+    "start_line_number": 2,
+    "end_line_number": 19,
+    "text": "SIT WITH CORRECT POSTURE\n•  Do not sit too close to the steering wheel or dashboard.  \nThe driver and the front passenger should not hold items  \non their laps.\n•  Do not allow anyone to lean against the door, centre pillar,  \nrear pillar and roof side rail.\n•  Do not allow anyone to kneel on the passenger seat facing  \nthe side door or put their heads or hands out the window.\nSRS AIRBAGS MAY NOT DEPLOY EVEN IN A COLLISION\n•  Examples of SRS airbags not deploying (test vehicle)",
+    "figures": []
+  },
+  {
+    "id": "safety manual.pdf_p6_c2",
+    "source": "safety manual.pdf",
+    "page_number": 6,
+    "start_line_number": 2,
+    "end_line_number": 35,
+    "text": "•  Examples of SRS airbags not deploying (test vehicle)  \nSRS driver and front passenger airbags\nCOLLISION FROM AN ANGLE COLLISION WITH A SMALL TREE OR  \nOTHER RELATIVELY MOVABLE OBJECT\nCOLLISIONS WHERE THE FORCE OF  \nTHE COLLISION IS DOWNWARD SUCH  \nAS AN IMPACT WITH THE LOADING  \nPLATFORM OF A TRUCK\nCOLLISIONS WHERE THE IMPACT  \nCOMES FROM AN ANGLE\nCOLLISIONS WHERE THE PASSENGER  \nCOMPARTMENT IS NOT DIRECTLY IMPACTED\n 03  SRS AIRBAGS\n1\n12\n2\nFRONT COLLISION AT LOW SPEED",
+    "figures": []
+  },
+}
+this is the raw data after reading the page 6:
+{
+      "page_number": 6,
+      "text": "6\nSRS Airbags \nSRS (Supplemental Restraint System) airbags are designed \nto provide further protection for the driver and passengers \nin addition to the primary safety protection provided by \nseatbelts. Types of SRS airbags are as follows:\n 1 SRS driver airbag / front passenger airbag \n2 SRS side airbags\nSPECIFICATIONS MAY VARY FROM THE MODELS AVAILABLE.\nSIT WITH CORRECT POSTURE\n•  Do not sit too close to the steering wheel or dashboard.  \nThe driver and the front passenger should not hold items  \non their laps.\n•  Do not allow anyone to lean against the door, centre pillar,  \nrear pillar and roof side rail.\n•  Do not allow anyone to kneel on the passenger seat facing  \nthe side door or put their heads or hands out the window.\nSRS AIRBAGS MAY NOT DEPLOY EVEN IN A COLLISION\n•  Examples of SRS airbags not deploying (test vehicle)  \nSRS driver and front passenger airbags\nCOLLISION FROM AN ANGLE COLLISION WITH A SMALL TREE OR  \nOTHER RELATIVELY MOVABLE OBJECT\nCOLLISIONS WHERE THE FORCE OF  \nTHE COLLISION IS DOWNWARD SUCH  \nAS AN IMPACT WITH THE LOADING  \nPLATFORM OF A TRUCK\nCOLLISIONS WHERE THE IMPACT  \nCOMES FROM AN ANGLE\nCOLLISIONS WHERE THE PASSENGER  \nCOMPARTMENT IS NOT DIRECTLY IMPACTED\n 03  SRS AIRBAGS\n1\n12\n2\nFRONT COLLISION AT LOW SPEED",
+      "lines": [
+        "6",
+        "SRS Airbags ",
+        "SRS (Supplemental Restraint System) airbags are designed ",
+        "to provide further protection for the driver and passengers ",
+        "in addition to the primary safety protection provided by ",
+        "seatbelts. Types of SRS airbags are as follows:",
+        " 1 SRS driver airbag / front passenger airbag ",
+        "2 SRS side airbags",
+        "SPECIFICATIONS MAY VARY FROM THE MODELS AVAILABLE.",
+        "SIT WITH CORRECT POSTURE",
+        "•  Do not sit too close to the steering wheel or dashboard.  ",
+        "The driver and the front passenger should not hold items  ",
+        "on their laps.",
+        "•  Do not allow anyone to lean against the door, centre pillar,  ",
+        "rear pillar and roof side rail.",
+        "•  Do not allow anyone to kneel on the passenger seat facing  ",
+        "the side door or put their heads or hands out the window.",
+        "SRS AIRBAGS MAY NOT DEPLOY EVEN IN A COLLISION",
+        "•  Examples of SRS airbags not deploying (test vehicle)  ",
+        "SRS driver and front passenger airbags",
+        "COLLISION FROM AN ANGLE COLLISION WITH A SMALL TREE OR  ",
+        "OTHER RELATIVELY MOVABLE OBJECT",
+        "COLLISIONS WHERE THE FORCE OF  ",
+        "THE COLLISION IS DOWNWARD SUCH  ",
+        "AS AN IMPACT WITH THE LOADING  ",
+        "PLATFORM OF A TRUCK",
+        "COLLISIONS WHERE THE IMPACT  ",
+        "COMES FROM AN ANGLE",
+        "COLLISIONS WHERE THE PASSENGER  ",
+        "COMPARTMENT IS NOT DIRECTLY IMPACTED",
+        " 03  SRS AIRBAGS",
+        "1",
+        "12",
+        "2",
+        "FRONT COLLISION AT LOW SPEED"
+      ],
+      "figures": []
+    },
+    now look at these and tell me the incorrect end and start lines in the chunks
+
