@@ -2,7 +2,6 @@ import json
 import re
 from typing import Dict, List
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from src.data_ingestion import PDFIngestor
 
 class TextChunker:
     def __init__(self, chunk_size: int = 800, overlap: int = 200):

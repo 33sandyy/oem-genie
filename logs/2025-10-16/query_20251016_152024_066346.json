@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-16T15:20:24.066346",
+  "query": "Explain completely on SRS Airbag",
+  "retrieved_chunks_count": 5,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "90\n1-7. Safety information\nSRS airbags\nThe SRS airbags inflate when the vehicle is subjected to certain\ntypes of severe impacts that may cause significant injury to the\noccupants. They work together with the seat belts to help reduce the\nrisk of death or serious injury.\nFront airbags\nDriver airbag/front passenger airbag\nCan help protect the head and chest of the driver and front pas-\nsenger from impact with interior components.\nDriver knee airbag\nCan help provide driver protection.",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 90,
+        "start_line_number": 1,
+        "end_line_number": 13
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "BAG OFF” indicator light, front passenger's seat belt buckle switch, seat belt\npretensioner assemblies, inflators, interconnecting wiring and power\nsources. (P. 437)\n■If the SRS airbags deploy (inflate)\n●Bruising and slight abrasions may result from contact with a deploying\n(inflating) SRS airbag.\n●A loud noise and white powder will be emitted.\n●Parts of the airbag module (steering wheel hub, airbag cover and inflator)",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 93,
+        "start_line_number": 9,
+        "end_line_number": 16
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "The main SRS airbag system components are shown above. The\nSRS airbag system is controlled by  the airbag sensor assembly. The\nairbag sensor assembly consists of a safing sensor and an airbag\nsensor.\nIn certain types of severe frontal or side impacts, the SRS airbag sys-\ntem triggers the airbag inflators. A chemical reaction in the inflators\nquickly fills the airbags with non-toxic gas to help restrain the motion\nof the occupants.",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 92,
+        "start_line_number": 9,
+        "end_line_number": 16
+      }
+    },
+    {
+      "chunk_number": 4,
+      "content": "98\n1-7. Safety information\nCAUTION\n■SRS airbag precautions\n●The SRS front passenger airbag also deploys with considerable force, and\ncan cause death or serious injury especially if the front passenger is very\nclose to the airbag. The front passenger seat should be as far from the air-\nbag as possible with the seatback adjusted, so the front passenger sits\nupright.\n●Improperly seated and/or restrained in fants and children can be killed or",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 98,
+        "start_line_number": 1,
+        "end_line_number": 10
+      }
+    },
+    {
+      "chunk_number": 5,
+      "content": "94\n1-7. Safety information\n■SRS airbag deployment conditions (SRS side airbags and SRS curtain\nshield airbags)\n●The SRS side airbags and SRS curtain shield airbags will deploy in the\nevent of an impact that exceeds the set threshold level (the level of force\ncorresponding to the impact force produced by an approximately 3300 lb.\n[1500 kg] vehicle colliding with the vehicle cabin from a direction perpen-\ndicular to the vehicle orientation at an approximate speed of 12 - 18 mph\n[20 - 30 km/h]).",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 94,
+        "start_line_number": 1,
+        "end_line_number": 10
+      }
+    }
+  ],
+  "ai_answer": "**SRS (Supplemental Restraint System) Airbag Overview**\n\n---\n\n### What the SRS Airbag Does\n- The SRS airbags inflate when the vehicle experiences certain severe impacts that could cause significant injury to the occupants.  \n- They work together with the seat‑belt system to reduce the risk of death or serious injury.\n\n### Main Types of SRS Airbags\n| Airbag | Primary Protection | Notes |\n|--------|-------------------|-------|\n| **Front driver airbag** | Protects the driver’s head and chest from impact with interior components. | |\n| **Front passenger airbag** | Protects the front passenger’s head and chest. | Must be positioned far enough from the occupant; seat‑back should be upright. |\n| **Driver knee airbag** | Provides additional protection for the driver’s lower body. | |\n| **Side airbags** | Deploy in side‑impact crashes that exceed a set force threshold. | |\n| **Curtain‑shield airbags** | Deploy from the roof rail to protect occupants’ heads in side impacts. | |\n\n### Key System Components\n- **Airbag sensor assembly** – includes a safing sensor and an airbag sensor; it detects crash conditions and triggers the system.  \n- **Inflators** – create a rapid chemical reaction that fills the airbags with non‑toxic gas.  \n- **Airbag modules** – consist of the steering‑wheel hub, airbag cover, and inflator (for the driver’s front airbag).  \n- **Wiring and power sources** – connect the sensors, inflators and control units.  \n- **Seat‑belt pretensioner assemblies** – work in concert with the airbags.  \n- **“BAG OFF” indicator light** – signals when the passenger‑airbag system is disabled.  \n- **Front passenger seat‑belt buckle switch** – part of the control logic.\n\n### How Deployment Occurs\n1. **Impact detection** – In a severe frontal or side crash, the airbag sensor assembly registers forces that exceed preset thresholds.  \n2. **Signal to inflators** – The control unit sends a signal to the appropriate inflators.  \n3. **Chemical reaction** – The inflators ignite a chemical reaction, generating a rapid burst of non‑toxic gas.  \n4. **Airbag inflation** – The gas fills the airbag, causing it to expand with considerable force.  \n5. **Occupant restraint** – The inflated bag helps restrain the occupant’s motion, reducing contact with interior structures.\n\n### Deployment Conditions\n- **Front airbags** – Deploy in severe frontal impacts.  \n- **Side and curtain‑shield airbags** – Deploy when the impact force exceeds the threshold equivalent to a 3,300‑lb (≈1,500 kg) vehicle striking the vehicle cabin from a direction perpendicular to the vehicle orientation at about 12‑18 mph (20‑30 km/h).\n\n### Effects of Deployment\n- **Physical sensations** – A loud “bang” and a burst of white powder are emitted when the bag inflates.  \n- **Possible injuries** – Bruising and slight abrasions can occur from contact with the deploying airbag.  \n- **Potential hazards** – The front passenger airbag can cause death or serious injury if a passenger is seated too close to it (e.g., very small children or improperly restrained occupants).\n\n### Safety Precautions\n- **Passenger positioning** – The front passenger seat should be as far from the airbag as possible, with the seatback adjusted so the passenger sits upright.  \n- **Child safety** – Children and infants should never sit in the front passenger seat unless the airbag is disabled; improper seating or restraint can be fatal.  \n- **Indicator awareness** – Monitor the “BAG OFF” light to ensure the passenger airbag is active when needed.\n\n---\n\n**In summary**, the SRS airbag system is a crash‑activated safety network that includes front, knee, side, and curtain‑shield airbags, each triggered by specific impact forces. Sensors detect severe collisions, inflators generate gas to fill the bags, and the inflated airbags work together with seat belts to protect occupants’ heads, chests, and knees while minimizing the risk of serious injury. Proper seat positioning and use of seat belts are essential to maximize the system’s effectiveness and avoid injury from the airbags themselves.",
+  "model_used": "openai/gpt-oss-120b"
+}

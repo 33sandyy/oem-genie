@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-16T11:41:15.313863",
+  "query": "Explain the BRAKE ASSIST",
+  "retrieved_chunks_count": 5,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "on the brake pedal is insufficient.\n•  The system’s computer analyses whether or not to activate Brake Assist based on how fast  \nand hard the driver is stepping on the brake pedal.\n•  The system detects the vehicle’s instability and controls the slide, allowing the driver to maintain \ncontrol of the vehicle. \n \nThe illustration shows what happens to the car after the driver rapidly turns the steering wheel",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 8,
+        "start_line_number": 8,
+        "end_line_number": 15
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "8\nBRAKE ASSIST \nBrake Assist helps in emergency situations when pressure on the  \nbrake pedal is insufficient during sudden or ‘panic’ braking.\nVSC (Vehicle Stability Control) system  \nVSC (Vehicle Stability Control) system helps to prevent wheel slip  \nwhen turning a vehicle or during sudden steering situations.\n•  Brake Assist helps to apply full braking force when it detects that the pressure that is applied  \non the brake pedal is insufficient.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 8,
+        "start_line_number": 1,
+        "end_line_number": 9
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "9\n•  During braking while cornering, this function controls the brake force that acts on the left and \nright wheels in accordance with the vehicle condition at that time. This ensures vehicle stability \nand excellent braking performance.\nEMERGENCY BRAKE SIGNAL\n•  The Emergency Brake Signal automatically flashes the hazard warning lights in the case of      \nemergency braking in order to reduce the risk of being rear ended by a following vehicle.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 9,
+        "start_line_number": 1,
+        "end_line_number": 7
+      }
+    },
+    {
+      "chunk_number": 4,
+      "content": "EBD controls the brake force that acts on the rear wheels in accordance with changes in \nthe vehicle condition in order to ensure excellent braking performance.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 9,
+        "start_line_number": 35,
+        "end_line_number": 37
+      }
+    },
+    {
+      "chunk_number": 5,
+      "content": "The illustration shows what happens to the car after the driver rapidly turns the steering wheel \nin mid-corner. With the aid of VSC, the car maneuvers properly and is able to quickly return \nto its original lane.\nReminder: VSC does not eliminate the danger of accidents. It only assists with vehicle stability.\n 05  BRAKE ASSIST  \n 06  VSC (VEHICLE STABILITY CONTROL) SYSTEM\nBRAKE\nFORCE\nBRAKE\nFORCE\nWithout VSC\nWithout Brake Assist\nWithout ABS\nWith ABS\nBraking Point\nWith Brake Assist\nWithout VSC",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 8,
+        "start_line_number": 13,
+        "end_line_number": 30
+      }
+    }
+  ],
+  "ai_answer": "Brake Assist is an electronic safety function that steps in when the driver tries to stop the vehicle but does not press the brake pedal hard enough – a situation that often occurs in a sudden or “panic”‑brake event.  \n\n**How it works**  \n* The vehicle’s computer continuously monitors how quickly and how forcefully the driver depresses the brake pedal.  \n* If it determines that the pedal pressure is insufficient for the speed and the urgency of the situation, the system automatically adds braking force to bring the brakes to full‑effort operation.  \n\n**What it does**  \n* It delivers full braking pressure even though the driver’s foot pressure is low, helping to shorten stopping distances in an emergency.  \n* While braking in a corner, Brake Assist works with the vehicle‑stability control (VSC) system to modulate brake force between the left and right wheels, maintaining stability and optimal braking performance.  \n\n**Additional feature**  \n* When Brake Assist is activated during an emergency stop, the Emergency Brake Signal flashes the hazard warning lights to warn trailing traffic and reduce the chance of a rear‑end collision.  \n\nIn short, Brake Assist detects an insufficient brake‑pedal effort in an emergency, automatically applies full braking force, and assists the driver in keeping the vehicle stable while stopping as quickly and safely as possible.",
+  "model_used": "openai/gpt-oss-120b"
+}

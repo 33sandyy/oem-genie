@@ -1,0 +1,102 @@
+{
+  "date": "2025-10-16",
+  "total_queries": 16,
+  "queries": [
+    {
+      "timestamp": "2025-10-16T10:15:46.722690",
+      "query": "Summarize tha airbag",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251016_101546_722690.json"
+    },
+    {
+      "timestamp": "2025-10-16T10:26:04.773446",
+      "query": "Explain completely on the SRS AIRBAGS",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251016_102604_773446.json"
+    },
+    {
+      "timestamp": "2025-10-16T11:21:29.358771",
+      "query": "Explain completely on the child safety",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251016_112129_358771.json"
+    },
+    {
+      "timestamp": "2025-10-16T11:24:30.803216",
+      "query": "Explain completely on SRS Airbag",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251016_112430_803216.json"
+    },
+    {
+      "timestamp": "2025-10-16T11:29:42.707035",
+      "query": "Explain completely on SRS Airbag",
+      "chunks_retrieved": 3,
+      "log_file": "query_20251016_112942_707035.json"
+    },
+    {
+      "timestamp": "2025-10-16T11:31:04.345840",
+      "query": "Explain completely on SRS Airbag",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_113104_345840.json"
+    },
+    {
+      "timestamp": "2025-10-16T11:41:15.313863",
+      "query": "Explain the BRAKE ASSIST",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_114115_313863.json"
+    },
+    {
+      "timestamp": "2025-10-16T12:41:20.617663",
+      "query": "Explain on the BRAKE ASSIST",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_124120_617663.json"
+    },
+    {
+      "timestamp": "2025-10-16T12:47:30.799287",
+      "query": "Explain completely on SRS Airbag",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_124730_799287.json"
+    },
+    {
+      "timestamp": "2025-10-16T12:53:32.262458",
+      "query": "How to wear seatbelt properly?",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_125332_262458.json"
+    },
+    {
+      "timestamp": "2025-10-16T13:01:52.900391",
+      "query": "What are Precautionary for RCTA",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_130152_900391.json"
+    },
+    {
+      "timestamp": "2025-10-16T13:28:59.020104",
+      "query": "Explain the Automatic air conditioning system in toyota camry 2011",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_132859_020104.json"
+    },
+    {
+      "timestamp": "2025-10-16T13:32:50.042350",
+      "query": "Explain the SRS Airbags",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_133250_042350.json"
+    },
+    {
+      "timestamp": "2025-10-16T15:20:24.066346",
+      "query": "Explain completely on SRS Airbag",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_152024_066346.json"
+    },
+    {
+      "timestamp": "2025-10-16T19:32:34.553786",
+      "query": "Exaplin Break assist",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_193234_553786.json"
+    },
+    {
+      "timestamp": "2025-10-16T19:36:20.957200",
+      "query": "Explain the BRAKE ASSIST",
+      "chunks_retrieved": 5,
+      "log_file": "query_20251016_193620_957200.json"
+    }
+  ]
+}

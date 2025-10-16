@@ -128,11 +128,11 @@ def generate_pdf(answer, results, query):
     width, height = A4
 
     y = height - 50
-    pdf.setTitle("Maintenance Assistant Answer")
+    pdf.setTitle("Customer Support Answer")
 
     # Header
     pdf.setFont("Helvetica-Bold", 16)
-    pdf.drawString(50, y, "Maintenance Assistant - Answer Report")
+    pdf.drawString(50, y, "Customer Support - Answer Report")
     y -= 40
 
     # Timestamp
@@ -194,9 +194,9 @@ def generate_pdf(answer, results, query):
     return buffer
 
 # Streamlit UI
-st.set_page_config(page_title="Maintenance Assistant", page_icon="🔧", layout="wide")
+st.set_page_config(page_title="Customer Support", page_icon="🔧", layout="wide")
 st.title("Customer Support")
-st.write("Ask questions based on your uploaded manuals.")
+st.write("Ask questions based on your safety manuals.")
 
 query = st.text_input("Enter your question:")
 
@@ -214,7 +214,7 @@ if query:
         log_dir = Path(".")
     
     with st.spinner("Searching knowledge base..."):
-        results = vectordb.similarity_search(query, k=3)
+        results = vectordb.similarity_search(query, k=5)
 
     if not results:
         st.warning("No relevant context found in manuals.")
@@ -235,7 +235,7 @@ if query:
         try:
             with open(log_file, 'w', encoding='utf-8') as f:
                 json.dump(log_entry, f, indent=2, ensure_ascii=False)
-            st.success(f"✅ Query logged to: {log_file}")
+            st.success(f"Query logged to: {log_file}")
         except Exception as e:
             st.error(f"Error saving log: {e}")
             
@@ -267,7 +267,7 @@ if query:
         if log_file:
             # Update daily summary
             summary_file = create_daily_summary(log_dir)
-            st.success(f"✅ Query logged to: {log_file}")
+            st.success(f"Query logged to: {log_file}")
         
         st.subheader("AI Answer")
         st.write(answer)

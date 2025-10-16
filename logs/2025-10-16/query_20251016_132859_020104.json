@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-16T13:28:59.020104",
+  "query": "Explain the Automatic air conditioning system in toyota camry 2011",
+  "retrieved_chunks_count": 5,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "200\n3-1. Using the air conditioning system and defogger\nAutomatic air conditioning system\nUsing the automatic mode\nPress .\nThe air conditioning system will  begin to operate. Air outlets\nand fan speed are automatically  adjusted according to the\ntemperature setting.\nTurning  to the right increases the temperature and\nturning  to the left decreases the temperature on the\ndriver’s side.\n: If equipped\nAir outlets are automatically selected and fan speed is automatically",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 200,
+        "start_line_number": 1,
+        "end_line_number": 13
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "bar).\nIf it is not available, have the\nfilter cleaned by your Toyota\ndealer.\n■ Replacement method\nRemove the air conditioning\nfilter and replace it with a new\none.\nThe “ UP” marks shown on\nthe filter should be pointing up.",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 405,
+        "start_line_number": 21,
+        "end_line_number": 30
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "tions where the windows need to be defogged.\n■When outside air temperature approaches 32°F (0°C)\nThe air conditioning system may not operate even when  is pressed.\n■When the indicator light on  flashes\nPress  and turn off the air conditioning system before turning it on\nonce more. There may be a problem in the air conditioning system if the indi-\ncator light continues to flash. Turn the air conditioning system off and have it\ninspected by your Toyota dealer.\n■Air conditioning odors",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 206,
+        "start_line_number": 8,
+        "end_line_number": 16
+      }
+    },
+    {
+      "chunk_number": 4,
+      "content": "210\n3-1. Using the air conditioning system and defogger\nAir flows to the feet and the\nwindshield defogger operates.\nThe air intake is automatically\nswitched to outside air mode. \nPressing  to turn the air\nconditioning on clears the wind-\nshield and side windows faster.\nAir flows to the windshield and\nside windows.\nThe air intake is automatically\nswitched to outside air mode. It is\nnot possible to return to recircu-\nlated air mode when the switch is\non. \nPressing\n  to turn the air",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 210,
+        "start_line_number": 1,
+        "end_line_number": 18
+      }
+    },
+    {
+      "chunk_number": 5,
+      "content": "205\n3-1. Using the air conditioning system and defogger\n3Interior features\n■ Using the automatic mode\nPress .\nThe air conditioning system will begin to operate. Air outlets\nand fan speed are automatically  adjusted according to the\ntemperature setting. (P. 200)\nPress “” to increase the temperature and “” to decrease the\ntemperature on .\nThe temperature for the driver and passenger seat can be set sepa-\nrately. (P. 201)\n■ Adjusting the temperature setting",
+      "metadata": {
+        "source": "2011-toyota-camry.pdf",
+        "page_number": 205,
+        "start_line_number": 1,
+        "end_line_number": 13
+      }
+    }
+  ],
+  "ai_answer": "The Automatic air‑conditioning system in the 2011 Toyota Camry works as follows:\n\n1. **Starting the system**  \n   * Press the **AUTO** button ( ). The system turns on and begins to operate automatically.\n\n2. **Automatic control of airflow and fan speed**  \n   * Once AUTO is engaged, the climate‑control unit selects the appropriate air‑outlet openings and sets the fan speed by itself, based on the temperature you set.\n\n3. **Setting the temperature**  \n   * Turn the temperature knob to the right (**▲ UP**) to raise the temperature, or to the left (**▼ DOWN**) to lower it.  \n   * The driver’s side temperature can be adjusted independently from the passenger’s side.\n\n4. **Air‑intake mode**  \n   * When AUTO is active, the system automatically switches the air intake to **outside‑air mode**. (It cannot be returned to recirculated‑air mode while the switch is on.)\n\n5. **Defogging function**  \n   * When the defogger is selected, air is directed to the feet and the windshield, helping clear the glass faster. Pressing the A/C button while in this mode also assists the windshield and side‑window defogging.\n\n6. **Cold‑weather limitation**  \n   * If the outside temperature is near 32 °F (0 °C), the A/C may not run even when the AUTO button is pressed.\n\n7. **Indicator‑light warning**  \n   * If the A/C indicator flashes, turn the system off, wait a moment, then turn it on again. If it continues to flash, the system should be inspected by a Toyota dealer.\n\n8. **Filter maintenance**  \n   * If the airflow feels reduced, have the cabin‑air filter cleaned by a dealer.  \n   * To replace the filter, remove the old one and install a new filter with the “▲ UP” arrow on the filter pointing upward.\n\nThese steps let the automatic climate‑control system maintain a comfortable interior temperature and assist with windshield defogging without the driver having to manually adjust fan speed or air‑outlet positions.",
+  "model_used": "openai/gpt-oss-120b"
+}

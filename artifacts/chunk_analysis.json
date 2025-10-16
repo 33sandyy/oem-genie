@@ -1,0 +1,130 @@
+{
+  "overall_statistics": {
+    "total_chunks": 68,
+    "character_length": {
+      "min": 187,
+      "max": 799,
+      "mean": 678.1764705882352,
+      "median": 759.5,
+      "stdev": 164.0405793604423
+    },
+    "word_count": {
+      "min": 28,
+      "max": 142,
+      "mean": 104.54411764705883,
+      "median": 109.0,
+      "stdev": 27.70981496651484
+    }
+  },
+  "by_source": {
+    "safety manual.pdf": {
+      "count": 68,
+      "min": 187,
+      "max": 799,
+      "mean": 678.1764705882352,
+      "median": 759.5,
+      "stdev": 164.0405793604423
+    }
+  },
+  "page_statistics": {
+    "avg_chunks_per_page": 2.8333333333333335,
+    "min_chunks_per_page": 2,
+    "max_chunks_per_page": 4
+  },
+  "uniformity_check": {
+    "mean_length": 678.1764705882352,
+    "tolerance": 135.63529411764705,
+    "outliers_count": 11,
+    "outliers_percentage": 16.176470588235293,
+    "outliers": [
+      {
+        "id": "safety manual.pdf_p2_c1",
+        "source": "safety manual.pdf",
+        "page": 2,
+        "length": 417,
+        "deviation": -261.17647058823525,
+        "deviation_percent": -38.51157949518605
+      },
+      {
+        "id": "safety manual.pdf_p3_c1",
+        "source": "safety manual.pdf",
+        "page": 3,
+        "length": 217,
+        "deviation": -461.17647058823525,
+        "deviation_percent": -68.00242865816635
+      },
+      {
+        "id": "safety manual.pdf_p4_c2",
+        "source": "safety manual.pdf",
+        "page": 4,
+        "length": 286,
+        "deviation": -392.17647058823525,
+        "deviation_percent": -57.82808569693816
+      },
+      {
+        "id": "safety manual.pdf_p9_c2",
+        "source": "safety manual.pdf",
+        "page": 9,
+        "length": 460,
+        "deviation": -218.17647058823525,
+        "deviation_percent": -32.17104692514528
+      },
+      {
+        "id": "safety manual.pdf_p15_c1",
+        "source": "safety manual.pdf",
+        "page": 15,
+        "length": 491,
+        "deviation": -187.17647058823525,
+        "deviation_percent": -27.599965304883334
+      },
+      {
+        "id": "safety manual.pdf_p16_c2",
+        "source": "safety manual.pdf",
+        "page": 16,
+        "length": 459,
+        "deviation": -219.17647058823525,
+        "deviation_percent": -32.31850117096018
+      },
+      {
+        "id": "safety manual.pdf_p17_c2",
+        "source": "safety manual.pdf",
+        "page": 17,
+        "length": 428,
+        "deviation": -250.17647058823525,
+        "deviation_percent": -36.88958279122213
+      },
+      {
+        "id": "safety manual.pdf_p18_c2",
+        "source": "safety manual.pdf",
+        "page": 18,
+        "length": 187,
+        "deviation": -491.17647058823525,
+        "deviation_percent": -72.4260560326134
+      },
+      {
+        "id": "safety manual.pdf_p21_c2",
+        "source": "safety manual.pdf",
+        "page": 21,
+        "length": 336,
+        "deviation": -342.17647058823525,
+        "deviation_percent": -50.45537340619307
+      },
+      {
+        "id": "safety manual.pdf_p23_c2",
+        "source": "safety manual.pdf",
+        "page": 23,
+        "length": 244,
+        "deviation": -434.17647058823525,
+        "deviation_percent": -64.02116402116403
+      },
+      {
+        "id": "safety manual.pdf_p24_c2",
+        "source": "safety manual.pdf",
+        "page": 24,
+        "length": 300,
+        "deviation": -378.17647058823525,
+        "deviation_percent": -55.763726255529534
+      }
+    ]
+  }
+}

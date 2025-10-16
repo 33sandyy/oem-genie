@@ -173,56 +173,34 @@ class PDFVisualOrderExtractor:
         """
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def main():
+    """
+    Main function to demonstrate usage
+    """
+    # Configuration
+    PDF_PATH = "../data/safety manual.pdf"  # Change this to your PDF path
+    OUTPUT_PATH = "output.json"
+    COLUMN_THRESHOLD = 50  # Adjust based on your PDF layout
     
-    def process_folder(self, folder_path: str, output_path: str):
-        """
-        Process all PDF files in a folder
-        
-        Args:
-            folder_path: Path to folder containing PDF files
-            output_path: Path to output JSON file
-        """
-        folder = Path(folder_path)
-        
-        if not folder.exists():
-            print(f"Error: Folder '{folder_path}' does not exist")
-            return
-        
-        # Find all PDF files
-        pdf_files = list(folder.glob("*.pdf"))
-        
-        if not pdf_files:
-            print(f"No PDF files found in '{folder_path}'")
-            return
-        
-        print(f"Found {len(pdf_files)} PDF files in '{folder_path}'")
-        print("-" * 60)
-        
-        # Process all PDFs and combine results
-        combined_result = {}
-        
-        for pdf_file in pdf_files:
-            try:
-                print(f"\nProcessing: {pdf_file.name}")
-                result = self.process_pdf(str(pdf_file))
-                combined_result.update(result)
-                
-                # Print summary for this PDF
-                pdf_name = pdf_file.name
-                print(f"  ✓ Extracted {len(result[pdf_name])} pages")
-                for page_data in result[pdf_name]:
-                    print(f"    Page {page_data['page_number']}: {len(page_data['lines'])} lines, {len(page_data['figures'])} figures")
-            
-            except Exception as e:
-                print(f"  ✗ Error processing {pdf_file.name}: {str(e)}")
-                continue
-        
-        # Save combined results
-        if combined_result:
-            self.save_to_json(combined_result, output_path)
-            print(f"\n{'=' * 60}")
-            print(f"All results saved to: {output_path}")
-            print(f"Total PDFs processed: {len(combined_result)}")
-        else:
-            print("\nNo PDFs were successfully processed")
-        return combined_result
+    # Create extractor
+    extractor = PDFVisualOrderExtractor(column_threshold=COLUMN_THRESHOLD)
+    
+    # Process PDF
+    print(f"Processing PDF: {PDF_PATH}")
+    result = extractor.process_pdf(PDF_PATH)
+    
+    # Save to JSON
+    extractor.save_to_json(result, OUTPUT_PATH)
+    print(f"Results saved to: {OUTPUT_PATH}")
+    
+    # Print summary
+    pdf_name = Path(PDF_PATH).name
+    print(f"\nExtracted {len(result[pdf_name])} pages")
+    for page_data in result[pdf_name]:
+        print(f"  Page {page_data['page_number']}: {len(page_data['lines'])} lines, {len(page_data['figures'])} figures")
+
+
+if __name__ == "__main__":
+    main()

@@ -3,7 +3,7 @@ import os
 import argparse
 from dotenv import load_dotenv
 from langchain.schema import Document
-from src.data_ingestion import PDFIngestor
+from src.data_ingestion import PDFVisualOrderExtractor
 from src.chunker import TextChunker
 from src.embedder import Embedder
 from src.vectorstore_chroma import ChromaVectorStore
@@ -12,8 +12,13 @@ load_dotenv()
 
 def build(pdf_folder, persist_dir):
     # 1️ Ingest PDFs
-    ingestor = PDFIngestor(pdf_folder)
-    raw_docs = ingestor.ingest_folder()  # {filename: [ {page_number, text, figures}, ...]}
+    # ingestor = PDFIngestor(pdf_folder)
+    # raw_docs = ingestor.ingest_folder()  # {filename: [ {page_number, text, figures}, ...]}
+
+    pdf_folder="data"
+    OUTPUT_PATH="outputs/raw_data.json"
+    pdf_reader=PDFVisualOrderExtractor()
+    raw_docs = pdf_reader.process_folder(pdf_folder,OUTPUT_PATH)
 
     # 2️ Chunk text
     chunker = TextChunker(chunk_size=500, overlap=100)
@@ -29,8 +34,8 @@ def build(pdf_folder, persist_dir):
             "start_line_number": chunk["start_line_number"],
             "end_line_number":chunk["end_line_number"],
         }
-        if chunk.get("figures"):  # only include if not empty
-            meta["figures"] = ", ".join(chunk["figures"])
+        # if chunk.get("figures"):  # only include if not empty
+        #     meta["figures"] = ", ".join(chunk["figures"])
 
         documents.append(
             Document(

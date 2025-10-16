@@ -17,3 +17,5 @@ langchain-community
 langchain-huggingface
 langchain-chroma
 reportlab
+matplotlib
+pymupdf4llm

@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-16T12:41:20.617663",
+  "query": "Explain on the BRAKE ASSIST",
+  "retrieved_chunks_count": 5,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "on the brake pedal is insufficient.\n•  The system’s computer analyses whether or not to activate Brake Assist based on how fast  \nand hard the driver is stepping on the brake pedal.\n•  The system detects the vehicle’s instability and controls the slide, allowing the driver to maintain \ncontrol of the vehicle. \n \nThe illustration shows what happens to the car after the driver rapidly turns the steering wheel",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 8,
+        "start_line_number": 8,
+        "end_line_number": 15
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "8\nBRAKE ASSIST \nBrake Assist helps in emergency situations when pressure on the  \nbrake pedal is insufficient during sudden or ‘panic’ braking.\nVSC (Vehicle Stability Control) system  \nVSC (Vehicle Stability Control) system helps to prevent wheel slip  \nwhen turning a vehicle or during sudden steering situations.\n•  Brake Assist helps to apply full braking force when it detects that the pressure that is applied  \non the brake pedal is insufficient.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 8,
+        "start_line_number": 1,
+        "end_line_number": 9
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "05  BRAKE ASSIST\n 06  VSC (VEHICLE STABILITY CONTROL) SYSTEM\n8\nBRAKE ASSIST\nBrake Assist helps in emergency situations when pressure on the\nbrake pedal is insufficient during sudden or ‘panic’ braking.\nWithout Brake Assist\nWith Brake Assist\nBA\nBRAKE\nFORCE\nBRAKE\nFORCE\n• \u0007Brake Assist helps to apply full braking force when it detects that the pressure that is applied\non the brake pedal is insufficient.\n• \u0007The system’s computer analyses whether or not to activate Brake Assist based on how fast",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 8,
+        "start_line_number": 1,
+        "end_line_number": 16
+      }
+    },
+    {
+      "chunk_number": 4,
+      "content": "the brake pedal to the accelerator pedal, thus making it \ndifficult for the vehicle to start off.\nWithout Hill-Start Assist Control\n• \u0007To help prevent this from occurring, the Hill-Start Assist\nControl temporarily (approximately 2 seconds at the \nmaximum) applies the brakes to all four wheels in order to \nhelp prevent the vehicle from descending backward.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 10,
+        "start_line_number": 24,
+        "end_line_number": 31
+      }
+    },
+    {
+      "chunk_number": 5,
+      "content": "9\n•  During braking while cornering, this function controls the brake force that acts on the left and \nright wheels in accordance with the vehicle condition at that time. This ensures vehicle stability \nand excellent braking performance.\nEMERGENCY BRAKE SIGNAL\n•  The Emergency Brake Signal automatically flashes the hazard warning lights in the case of      \nemergency braking in order to reduce the risk of being rear ended by a following vehicle.",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 9,
+        "start_line_number": 1,
+        "end_line_number": 7
+      }
+    }
+  ],
+  "ai_answer": "**Brake Assist** is an electronic safety function that intervenes when the driver attempts an emergency or “panic” stop but does not press the brake pedal hard enough or quickly enough.\n\n- **How it works** – The vehicle’s control computer constantly monitors how fast and how hard the driver depresses the brake pedal. If it determines that the pedal application is rapid (indicating a panic stop) but the applied pressure is insufficient, it automatically adds additional brake pressure.\n\n- **What it does** – Once activated, Brake Assist commands the braking system to apply **full braking force** to all four wheels. This extra force brings the actual brake pressure up to the maximum that the system can deliver, helping the vehicle stop much more quickly than the driver could achieve on his or her own.\n\n- **Why it matters** – In an emergency situation, many drivers do not press the pedal hard enough, which can lengthen stopping distances. Brake Assist compensates for that shortfall, improving the likelihood of avoiding a collision.\n\n- **Visual comparison** – The manual shows a “Without Brake Assist” scenario where brake force is low, and a “With Brake Assist” scenario where the brake force is significantly higher, illustrating the increased stopping power provided by the system.\n\nIn short, Brake Assist detects a rapid, insufficient pedal press during an emergency and automatically boosts brake pressure to deliver the maximum braking effort, enhancing safety during panic‑braking events.",
+  "model_used": "openai/gpt-oss-120b"
+}

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-10-16T10:15:46.722690",
+  "query": "Summarize tha airbag",
+  "retrieved_chunks_count": 3,
+  "retrieved_context": [
+    {
+      "chunk_number": 1,
+      "content": "SIT WITH CORRECT POSTURE\n•  Do not sit too close to the steering wheel or dashboard.  \nThe driver and the front passenger should not hold items  \non their laps.\n•  Do not allow anyone to lean against the door, centre pillar,  \nrear pillar and roof side rail.\n•  Do not allow anyone to kneel on the passenger seat facing  \nthe side door or put their heads or hands out the window.\nSRS AIRBAGS MAY NOT DEPLOY EVEN IN A COLLISION\n•  Examples of SRS airbags not deploying (test vehicle)",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 6,
+        "start_line_number": 9,
+        "end_line_number": 19
+      }
+    },
+    {
+      "chunk_number": 2,
+      "content": "•  Examples of SRS airbags not deploying (test vehicle)  \nSRS driver and front passenger airbags\nCOLLISION FROM AN ANGLE COLLISION WITH A SMALL TREE OR  \nOTHER RELATIVELY MOVABLE OBJECT\nCOLLISIONS WHERE THE FORCE OF  \nTHE COLLISION IS DOWNWARD SUCH  \nAS AN IMPACT WITH THE LOADING  \nPLATFORM OF A TRUCK\nCOLLISIONS WHERE THE IMPACT  \nCOMES FROM AN ANGLE\nCOLLISIONS WHERE THE PASSENGER  \nCOMPARTMENT IS NOT DIRECTLY IMPACTED\n 03  SRS AIRBAGS\n1\n12\n2\nFRONT COLLISION AT LOW SPEED",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 6,
+        "start_line_number": 18,
+        "end_line_number": 32
+      }
+    },
+    {
+      "chunk_number": 3,
+      "content": "7\n•  Example of deployment in which SRS airbags may not demonstrate \ntheir primary effectiveness.\nIN ROLLS AND TURN OVERS  \nFor details, please refer to the owner’s manual for your vehicle.\nDO NOT ATTACH OBJECTS AROUND THE SRS AIRBAGS\n•  Do not attach objects on areas such as the dashboard, steering \nwheel pad, lower portion of instrument panel, doors, windshield \nglass, front or rear pillar, roof side rail and assist grip.\nABS",
+      "metadata": {
+        "source": "safety manual.pdf",
+        "page_number": 7,
+        "start_line_number": 1,
+        "end_line_number": 9
+      }
+    }
+  ],
+  "ai_answer": "**Airbag Summary (based on the provided manual excerpt)**  \n\n- **Correct Seating:** Sit with proper posture; keep a safe distance from the steering wheel and dashboard. Passengers should not place items on their laps, lean against structural pillars, kneel on seats, or stick heads/hands out the windows.  \n\n- **Airbag Deployment Limits:**  \n  - SRS (Supplemental Restraint System) driver and front‑passenger airbags may **fail to deploy** in certain situations, such as:  \n    - Collisions with a small, movable object (e.g., a tree) from an angle.  \n    - Impacts where the force is primarily downward (e.g., hitting a truck’s loading platform).  \n    - Impacts that strike the vehicle from an angle rather than head‑on.  \n    - Collisions where the passenger compartment is not directly hit.  \n    - Low‑speed frontal collisions where airbags may not show their full effectiveness.  \n    - Rollover or turn‑over events.  \n\n- **Object Placement:** Do **not** attach or place any objects on or near the airbag‑related areas, including the dashboard, steering‑wheel pad, lower instrument panel, doors, windshield, front/rear pillars, roof side rails, or assist grip.  \n\n- **Reference:** For complete details, consult the vehicle’s owner’s manual.  ",
+  "model_used": "openai/gpt-oss-120b"
+}
