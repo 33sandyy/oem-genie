@@ -21,7 +21,7 @@ def build(pdf_folder, persist_dir):
     raw_docs = pdf_reader.process_folder(pdf_folder,OUTPUT_PATH)
 
     # 2️ Chunk text
-    chunker = TextChunker(chunk_size=500, overlap=100)
+    chunker = TextChunker(chunk_size=800, overlap=200)
     chunk_dicts = chunker.create_chunks_from_docs(raw_docs)
 
     # 3️ Convert to LangChain Document objects with clean metadata
@@ -48,7 +48,7 @@ def build(pdf_folder, persist_dir):
     print(f"Loaded {len(documents)} chunks from {len(raw_docs)} PDFs.")
 
     # 4️ Create embeddings (consistent with app.py)
-    embedder = Embedder(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embedder = Embedder(model_name="sentence-transformers/msmarco-distilbert-base-v4")
 
     # 5️ Build and persist Chroma collection
     chroma_store = ChromaVectorStore(persist_dir)

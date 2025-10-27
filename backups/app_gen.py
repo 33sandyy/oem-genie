@@ -1,7 +1,9 @@
+# app.py
 import os
 import json
 import streamlit as st
 from dotenv import load_dotenv
+from groq import Groq
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from datetime import datetime
@@ -11,8 +13,16 @@ from pathlib import Path
 from src.embedder import Embedder
 from src.vectorstore_chroma import ChromaVectorStore
 
-# Load API keys (not needed but keeping for compatibility)
+# Load API keys
 load_dotenv()
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+if not GROQ_API_KEY:
+    st.error("Missing GROQ_API_KEY in .env file")
+    st.stop()
+
+# Initialize Groq client
+client = Groq(api_key=GROQ_API_KEY)
 
 # Embeddings + Chroma
 embedder = Embedder(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -43,8 +53,8 @@ def setup_logging_directory():
     
     return log_dir
 
-def log_query_and_results(query, results, log_dir):
-    """Log query and retrieved context in formatted JSON."""
+def log_query_and_results(query, results, answer, log_dir):
+    """Log query, retrieved context, and AI answer in formatted JSON."""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")  # Added microseconds for uniqueness
     log_file = log_dir / f"query_{timestamp}.json"
     
@@ -67,7 +77,9 @@ def log_query_and_results(query, results, log_dir):
         "timestamp": datetime.now().isoformat(),
         "query": query,
         "retrieved_chunks_count": len(results),
-        "retrieved_context": formatted_results
+        "retrieved_context": formatted_results,
+        "ai_answer": answer,
+        "model_used": "openai/gpt-oss-120b"
     }
     
     # Save to JSON file with error handling
@@ -109,18 +121,18 @@ def create_daily_summary(log_dir):
     
     return summary_file
 
-def generate_pdf(results, query):
-    """Generate a PDF with the retrieved context."""
+def generate_pdf(answer, results, query):
+    """Generate a PDF with the AI answer and retrieved context."""
     buffer = BytesIO()
     pdf = canvas.Canvas(buffer, pagesize=A4)
     width, height = A4
 
     y = height - 50
-    pdf.setTitle("Search Results")
+    pdf.setTitle("Customer Support Answer")
 
     # Header
     pdf.setFont("Helvetica-Bold", 16)
-    pdf.drawString(50, y, "Search Results - Retrieved Context")
+    pdf.drawString(50, y, "Customer Support - Answer Report")
     y -= 40
 
     # Timestamp
@@ -130,10 +142,24 @@ def generate_pdf(results, query):
 
     # Question
     pdf.setFont("Helvetica-Bold", 12)
-    pdf.drawString(50, y, "Search Query:")
+    pdf.drawString(50, y, "Question:")
     y -= 20
     pdf.setFont("Helvetica", 11)
     for line in query.split("\n"):
+        pdf.drawString(50, y, line)
+        y -= 15
+
+    y -= 15
+
+    # AI Answer
+    pdf.setFont("Helvetica-Bold", 12)
+    pdf.drawString(50, y, "AI Answer:")
+    y -= 20
+    pdf.setFont("Helvetica", 11)
+    for line in answer.split("\n"):
+        if y < 80:  # New page if space runs out
+            pdf.showPage()
+            y = height - 50
         pdf.drawString(50, y, line)
         y -= 15
 
@@ -141,7 +167,7 @@ def generate_pdf(results, query):
 
     # Retrieved Context
     pdf.setFont("Helvetica-Bold", 12)
-    pdf.drawString(50, y, f"Retrieved Chunks ({len(results)} results):")
+    pdf.drawString(50, y, "Retrieved Context:")
     y -= 25
     pdf.setFont("Helvetica", 10)
 
@@ -168,11 +194,11 @@ def generate_pdf(results, query):
     return buffer
 
 # Streamlit UI
-st.set_page_config(page_title="Knowledge Base Search", page_icon="🔍", layout="wide")
-st.title("Knowledge Base Search")
-st.write("Search and retrieve relevant chunks from your safety manuals.")
+st.set_page_config(page_title="Customer Support", page_icon="🔧", layout="wide")
+st.title("Customer Support")
+st.write("Ask questions based on your safety manuals.")
 
-query = st.text_input("Enter your search query:")
+query = st.text_input("Enter your question:")
 
 if query:
     # Setup logging - this will create the directory
@@ -198,7 +224,9 @@ if query:
             "timestamp": datetime.now().isoformat(),
             "query": query,
             "retrieved_chunks_count": 0,
-            "retrieved_context": []
+            "retrieved_context": [],
+            "ai_answer": "No relevant context found in manuals.",
+            "model_used": "N/A"
         }
         
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
@@ -212,59 +240,57 @@ if query:
             st.error(f"Error saving log: {e}")
             
     else:
+        context = "\n".join([doc.page_content for doc in results])
+
+        with st.spinner("Generating response..."):
+            chat_completion = client.chat.completions.create(
+                model="openai/gpt-oss-120b",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a helpful maintenance assistant. "
+                            "Answer strictly using the provided context. "
+                            "If the answer is not in context, reply: "
+                            "'I couldn't find that in the manuals.'"
+                        ),
+                    },
+                    {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {query}"},
+                ],
+            )
+
+        answer = chat_completion.choices[0].message.content
+        
         # Log query and results
-        log_file = log_query_and_results(query, results, log_dir)
+        log_file = log_query_and_results(query, results, answer, log_dir)
         
         if log_file:
             # Update daily summary
             summary_file = create_daily_summary(log_dir)
             st.success(f"Query logged to: {log_file}")
         
-        st.subheader(f"Retrieved {len(results)} Relevant Chunks")
+        st.subheader("AI Answer")
+        st.write(answer)
 
         # Generate and offer PDF download
-        pdf_buffer = generate_pdf(results, query)
-        # st.download_button(
-        #     label="📥 Download Search Results as PDF",
-        #     data=pdf_buffer,
-        #     file_name=f"search_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
-        #     mime="application/pdf",
-        # )
+        pdf_buffer = generate_pdf(answer, results, query)
+        st.download_button(
+            label="📥 Download Answer & Context as PDF",
+            data=pdf_buffer,
+            file_name=f"maintenance_answer_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+            mime="application/pdf",
+        )
 
-        # Display retrieved context (no longer in expander - always visible)
-        st.markdown("---")
-        for i, doc in enumerate(results, start=1):
-            with st.container():
-                col1, col2 = st.columns([3, 1])
-                
-                with col1:
-                    st.markdown(f"### 📄 Chunk {i}")
-                
-                with col2:
-                    st.caption(f"Relevance Rank: {i}")
-                
-                # Content
-                st.markdown("**Content:**")
-                st.text_area(
-                    f"Chunk {i} content",
-                    value=doc.page_content,
-                    height=150,
-                    key=f"chunk_{i}",
-                    label_visibility="collapsed"
+        with st.expander("📖 View Retrieved Context"):
+            for i, doc in enumerate(results):
+                st.markdown(f"**Chunk {i+1}:**")
+                st.write(doc.page_content)
+                st.caption(
+                    f"Source: {doc.metadata.get('source', 'N/A')} | "
+                    f"Page: {doc.metadata.get('page_number', 'N/A')} | "
+                    f"Start Line: {doc.metadata.get('start_line_number', 'N/A')} | "
+                    f"End Line: {doc.metadata.get('end_line_number', 'N/A')}"
                 )
-                
-                # Metadata
-                col1, col2, col3, col4 = st.columns(4)
-                with col1:
-                    st.metric("Source", doc.metadata.get('source', 'N/A'))
-                with col2:
-                    st.metric("Page", doc.metadata.get('page_number', 'N/A'))
-                with col3:
-                    st.metric("Start Line", doc.metadata.get('start_line_number', 'N/A'))
-                with col4:
-                    st.metric("End Line", doc.metadata.get('end_line_number', 'N/A'))
-                
-                st.markdown("---")
 
 # Sidebar: Show logging statistics
 with st.sidebar:

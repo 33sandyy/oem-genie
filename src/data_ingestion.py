@@ -209,12 +209,12 @@ class PDFVisualOrderExtractor:
                 
                 # Print summary for this PDF
                 pdf_name = pdf_file.name
-                print(f"  ✓ Extracted {len(result[pdf_name])} pages")
+                print(f" Extracted {len(result[pdf_name])} pages")
                 for page_data in result[pdf_name]:
                     print(f"    Page {page_data['page_number']}: {len(page_data['lines'])} lines, {len(page_data['figures'])} figures")
             
             except Exception as e:
-                print(f"  ✗ Error processing {pdf_file.name}: {str(e)}")
+                print(f" Error processing {pdf_file.name}: {str(e)}")
                 continue
         
         # Save combined results
@@ -226,3 +226,9 @@ class PDFVisualOrderExtractor:
         else:
             print("\nNo PDFs were successfully processed")
         return combined_result
+    
+# if __name__=="__main__":
+#     pdf_folder="data"
+#     OUTPUT_PATH="../outputs/raw_data_1.json"
+#     pdf_reader=PDFVisualOrderExtractor()
+#     raw_docs = pdf_reader.process_folder(pdf_folder,OUTPUT_PATH)

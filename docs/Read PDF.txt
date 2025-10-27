@@ -1,0 +1,28 @@
+
+Overall Working:
+
+| Step | Function                         | Purpose                                     |
+| ---- | -------------------------------- | ------------------------------------------- |
+| 1    | `extract_text_blocks()`          | Extract text lines with position            |
+| 2    | `detect_columns()`               | Detect if text belongs to left/right column |
+| 3    | `sort_blocks_in_reading_order()` | Order text visually (L→R, T→B)              |
+| 4    | `extract_figures()`              | Detect image regions                        |
+| 5    | `process_pdf()`                  | Combine all info page-wise                  |
+| 6    | `process_folder()`               | Handle multiple PDFs                        |
+| 7    | `save_to_json()`                 | Export structured output                    |
+
+
+Step 1: extract_text_blocks()
+
+| Step | What happens                                |
+| ---- | ------------------------------------------- |
+| 1    | Reads text structure via `get_text("dict")` |
+| 2    | Iterates over all text blocks               |
+| 3    | Extracts text line-by-line (combines spans) |
+| 4    | Keeps only non-empty lines                  |
+| 5    | Records text with bounding box positions    |
+| 6    | Returns list of `TextBlock` objects         |
+
+
+Step 2: detect_columns()
+

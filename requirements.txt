@@ -19,3 +19,5 @@ langchain-chroma
 reportlab
 matplotlib
 pymupdf4llm
+rank-bm25
+cross-encoder
